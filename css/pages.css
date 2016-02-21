@@ -155,7 +155,20 @@ u{
 
 }
 
-
+#logout{
+	float:right;
+	position:absolute;
+	top:0%;
+	right:0%;
+	height:7%;
+	width:10%;
+	border-radius:8px;
+	background-color:#FF0009;
+	text-align:center;
+	font-size:1.5em;
+	font-family:Oswald;
+	border-style:none;
+}
 
 #one , #two, #three, #four {
 	text-align:right;
