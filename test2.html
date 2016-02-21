@@ -20,7 +20,7 @@
 	<script>
 			var app = angular.module('myApp', []);
 			app.controller('myCtrl', function($scope, $http) {
-				$http.get("http://testdataex.azurewebsites.net/test.html")
+				$http.get("http://rideshare.azurewebsites.net/JSON/login.JSON")
 	    		.then(function(response) {
 	        	$scope.myWelcome = response.data;
 	    });
