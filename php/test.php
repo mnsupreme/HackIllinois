@@ -8,7 +8,7 @@ Email address: <?php echo $_POST["password"]; ?><br>
 
 <?php
 
-$servername = "localhost";
+$servername = "127.0.0.1";
 $username = "root";
 $password = "";
 
