@@ -28,7 +28,7 @@ else
 {
 	echo "Error creating database: " . mysqli_error($conn);
 }
-
+echo $_POST["username"];
 mysqli_close($conn);
 ?>
 
