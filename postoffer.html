@@ -10,17 +10,27 @@
   <body>
   <img src="img/cancel.png" onclick="location.href='profilepage.html'" id="back">
   <h1 class="title">Offer a Ride</h1>
-  <div class="listing" ng-app="">
-  <span class="word" >*From: <input ng-model="From"></input></span>
-<span class="word" id="one" >*To: <input ng-model="To" ></input></span>
- <span class="word" >*Departure Time: <input ng-model="Departure" type="time"></input></span>
-<span class="word" id="two">*Arrival Time: <input ng-model="Arrival"  type="time"></input></span>
- <span class="word">*Date: <input ng-model="Date" type="date"></input></span>
-<span class="word" id="three">Price: <input ng-model="price"  type="currency"></input></span>
-<span class="word">*Spots Available: <input ng-model="spot"></input></span>
-<span class="word" id="four"><input type="submit" value="submit"  id="makeoffer"></input></span>
-  </div>
+  <form class="listing" ng-submit="submitOffer()">
+  <span class="word" >*From: <input ng-model="offer.from"></input></span>
+<span class="word" id="one" >*To: <input ng-model="offer.to" ></input></span>
+ <span class="word" >*Departure Time: <input ng-model="offer.departure" type="time"></input></span>
+<span class="word" id="two">*Arrival Time: <input ng-model="offer.arrival"  type="time"></input></span>
+ <span class="word">*Date: <input ng-model="offer.date" type="date"></input></span>
+<span class="word" id="three">Price: <input ng-model="offer.price"  type="currency"></input></span>
+<span class="word">*Spots Available: <input ng-model="offer.spot"></input></span>
+<span class="word" id="four"><input type="submit" value="submit"  id="makeoffer" ></input></span>
+  </form>
+  <script>
+  function myController($scope){
+    $scope.submitOffer=function(){
+        /* while compiling form , angular created this object*/
+        var data=$scope.offer;  
+        /* post to server*/
+        $http.post(url, data);        
+    }
 
+}
+</script>
 
 
 
