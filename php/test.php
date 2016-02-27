@@ -13,11 +13,11 @@ $username = "root";
 $password = "";
 
 $conn=mysqli_connect($servername,$username,$password);
-mysqli_select_db($con,"test");
+mysqli_select_db($conn,"test");
 
 if(!$conn)
 {
-	die("Connection failed: " . mysqli_error($con));
+	die("Connection failed: " . mysqli_error($conn));
 }
 echo "Connected successfully";
 
