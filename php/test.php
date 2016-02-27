@@ -17,11 +17,11 @@ Email address: <?php echo $_POST["password"]; ?><br>
  	 	$conn = sqlsrv_connect($serverName, $connectionInfo);
 if(!$conn)
 {
-	echo "Fail";
+	system.out.println("Fail");
 }
 else
 {
-	echo "success";
+	system.out.println("success");
 }
 
 mysqli_close($conn);
