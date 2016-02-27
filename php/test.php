@@ -1,12 +1,10 @@
-<!DOCTYPE html>
 <html>
 <body>
 
-<h1>Myfirst PHP page</h1>
+<h1>Test</h1>
 
-<?php
-echo "Hello World!";
-?>
+Welcome <?php echo $_POST["username"]; ?><br>
+Email address: <?php echo $_POST["password"]; ?><br>
 
 </body>
 </html>
