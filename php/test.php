@@ -25,7 +25,7 @@ $sql = "USE test
 
 		INSERT INTO username (username,password)
 
-		VALUES ($_POST["username"],$_POST["password"]);"
+		VALUES ($_POST["username"],$_POST["password"])";
 
 ?>
 
