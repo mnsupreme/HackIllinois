@@ -17,7 +17,7 @@ Email address: <?php echo $_POST["password"]; ?><br>
  	 	$conn = sqlsrv_connect($serverName, $connectionInfo);
 if(!$conn)
 {
-	system.out.println("Fail");
+	die("Fail" .mysqli_connect_error());
 }
 else
 {
