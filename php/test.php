@@ -7,19 +7,25 @@ Welcome <?php echo $_POST["username"]; ?><br>
 Email address: <?php echo $_POST["password"]; ?><br>
 
 <?php
+
 $servername = "localhost";
 $username = "root";
 $password = "";
 
-$conn=new mysqil($servername,$username,$password);
+$conn=mysqli_connect($servername,$username,$password);
+mysqli_select_db($con,"test");
 
-if($conn -> connect_error)
+if(!$conn)
 {
-	die("Connection failed: " . $conn->connect_error);
+	die("Connection failed: " . mysqli_error($con));
 }
 echo "Connected successfully";
 
-$sql = "CREATE TABLE Users(name VARCHAR(30) NOT NULL,password VARCHAR(30) NOT NULL,PRIMARY KEY(name))";
+$sql = "USE test
+
+		INSERT INTO username (username,password)
+
+		VALUES ($_POST["username"],$_POST["password"]);"
 
 ?>
 
