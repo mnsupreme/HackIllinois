@@ -17,8 +17,11 @@ else
 	system.out.println("success");
 }
 
+$sql = "CREATE TABLE Users(name VARCHAR(30) NOT NULL,password VARCHAR(30) NOT NULL,PRIMARY KEY(name))";
 mysqli_close($conn);
 ?>
+
+
 
 </body>
 </html>
