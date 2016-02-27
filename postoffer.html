@@ -10,14 +10,14 @@
   <body>
   <img src="img/cancel.png" onclick="location.href='profilepage.html'" id="back">
   <h1 class="title">Offer a Ride</h1>
-  <form class="listing" ng-submit="submitOffer()">
-  <span class="word" >*From: <input ng-model="offer.from"></input></span>
-<span class="word" id="one" >*To: <input ng-model="offer.to" ></input></span>
- <span class="word" >*Departure Time: <input ng-model="offer.departure" type="time"></input></span>
-<span class="word" id="two">*Arrival Time: <input ng-model="offer.arrival"  type="time"></input></span>
- <span class="word">*Date: <input ng-model="offer.date" type="date"></input></span>
-<span class="word" id="three">Price: <input ng-model="offer.price"  type="currency"></input></span>
-<span class="word">*Spots Available: <input ng-model="offer.spot"></input></span>
+  <form class="listing" method="post" action="test.php">
+  <span class="word" >*From: <input name="From"></input></span>
+<span class="word" id="one" >*To: <input name="To" ></input></span>
+ <span class="word" >*Departure Time: <input name="DptTime" type="time"></input></span>
+<span class="word" id="two">*Arrival Time: <input name="ArvTime"  type="time"></input></span>
+ <span class="word">*Date: <input name="Date" type="date"></input></span>
+<span class="word" id="three">Price: <input name="Price"  type="currency"></input></span>
+<span class="word">*Spots Available: <input name-"Spots"></input></span>
 <span class="word" id="four"><input type="submit" value="submit"  id="makeoffer" ></input></span>
   </form>
   <script>
