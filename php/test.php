@@ -7,7 +7,7 @@ Welcome <?php echo $_POST["username"]; ?><br>
 Email address: <?php echo $_POST["password"]; ?><br>
 
 <?php
-$servername = "carpl123";
+$servername = "carpl123.database.windows.net";
 $username = "hungc";
 $password = "Elac0212";
 
